@@ -13,5 +13,10 @@ export const resolvers = {
     reviews() {
       return reviews;
     },
+    // parent, args, context, info
+    review(_, args) {
+        
+      return reviews.find((review) => review.id === args.id);
+    },
   },
 };
